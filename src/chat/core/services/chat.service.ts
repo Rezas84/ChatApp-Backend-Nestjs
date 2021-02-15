@@ -17,7 +17,7 @@ export class ChatService implements IChatService{
 
   addClient(id: string, nickname: string): ChatClient {
     let chatClient = this.clients.find(
-    ((c) => c.nickname === nickname && c.id === id);
+    ((c) => c.nickname === nickname && c.id === id));
     if(chatClient) {
       return chatClient;
     }
