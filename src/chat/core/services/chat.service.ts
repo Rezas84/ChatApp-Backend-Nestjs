@@ -10,7 +10,7 @@ export class ChatService implements IChatService{
 
   addMessage(message: string, clientId: string): ChatMessage {
     const client = this.clients.find((c) => c.id === clientId);
-    const chatMessage: ChatMessage = { message: message, sender: client };
+    const chatMessage: ChatMessage = { message: message, sender: client, date: new Date().toLocaleString()};
     this.allMessages.push(chatMessage);
     return chatMessage;
   }
